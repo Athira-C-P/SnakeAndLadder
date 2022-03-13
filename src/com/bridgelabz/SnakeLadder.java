@@ -17,8 +17,10 @@ public class SnakeLadder {
         Scanner in = new Scanner(System.in);
         int startPosition = 0;
         int currentPosition = 0;
+        int counter = 0;
         System.out.println("Game starts from: " +startPosition);
         while (currentPosition != 100) {
+            counter++;
             System.out.println("Enter 1 to roll a die");
             int die = in.nextInt();
             if (die == 1) {
@@ -40,7 +42,7 @@ public class SnakeLadder {
                 }
                 if (currentPosition == 100) {
                     System.out.println("Position: " + currentPosition);
-                    System.out.println("You Won!");
+                    System.out.println("You Won! You took " +counter +" plays of dice to Win.");
                     break;
                 }
                 else if (currentPosition > 100) {
